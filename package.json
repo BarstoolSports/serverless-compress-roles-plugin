@@ -1,7 +1,7 @@
 {
-  "name": "@shelf/serverless-simplify-default-exec-role-plugin",
+  "name": "serverless-compress-roles-plugin",
   "version": "0.0.2",
-  "description": "serverless-simplify-default-exec-role-plugin",
+  "description": "serverless-compress-roles-plugin",
   "license": "MIT",
   "author": {
     "name": "Vlad Holubiev",

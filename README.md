@@ -1,4 +1,4 @@
-# serverless-simplify-default-exec-role-plugin
+# serverless-compress-roles-plugin
 
 > Fixes "IamRoleLambdaExecution - Maximum policy size of 10240 bytes exceeded" error
 
@@ -9,7 +9,7 @@ It searches for the `IamRoleLambdaExecution` resource and modifies the only poli
 ## Install
 
 ```
-$ yarn add --dev @shelf/serverless-simplify-default-exec-role-plugin
+$ yarn add --dev @shelf/serverless-compress-roles-plugin
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ In your `serverless.yml` file:
 
 ```yaml
 plugins:
-  - '@shelf/serverless-simplify-default-exec-role-plugin'
+  - '@shelf/serverless-compress-roles-plugin'
 ```
 
 ## Explanation
