@@ -8,6 +8,14 @@ const policyStatements = [{
       'Fn::Sub': 'arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:*'
     }
   ]
+}, {
+  Effect: 'Allow',
+  Action: 'sqs:SendMessage',
+  Resource: [
+    {
+      'Fn::Sub': 'arn:${AWS::Partition}:sqs:${AWS::Region}:${AWS::AccountId}:*'
+    }
+  ]
 }];
 
 class SimplifyDefaultExecRole {
@@ -29,6 +37,9 @@ function simplifyBaseIAMLogGroups(serverless) {
         const actions = typeof Action === 'string' ? [Action] : [...Action]
         for (const action of actions) {
           if (action.startsWith('logs:')) {
+            return false
+          }
+          if (action.startsWith('sqs:SendMessage')) {
             return false
           }
         }
